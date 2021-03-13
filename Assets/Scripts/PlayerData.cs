@@ -1,8 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
-public struct PlayerData
+public class PlayerData
 {
     public string guid;
 
@@ -13,6 +14,8 @@ public struct PlayerData
     public BossInfo[] bosses_info;
 
     public SpellInfo[] spells_info;
+
+    public MapInfo map_info;
 
     public SystemLanguage language;
 
@@ -53,4 +56,17 @@ public struct PlayerData
     public HolidayInfo holiday_info;
 
     public LogInToken token;
+
+
+
+    public PlayerData()
+    {
+        guid = Guid.NewGuid().ToString();
+        name = $"guest";
+
+        heroes_info = new HeroInfo[20];
+        bosses_info = new BossInfo[12];
+        spells_info = new SpellInfo[0];
+        map_info = new MapInfo();
+    }
 }
