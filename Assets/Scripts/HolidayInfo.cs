@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 
-public struct HolidayInfo
+public class HolidayInfo
 {
     public EHoliday holiday;
 

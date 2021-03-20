@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [System.Serializable]
-public class BossInfo
+public class BossInfo : CardInfo
 {
-    
+
 }

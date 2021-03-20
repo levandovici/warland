@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [System.Serializable]
-public struct HeroInfo
+public class HeroInfo : CardInfo
 {
     
 }

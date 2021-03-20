@@ -21,7 +21,7 @@ public class CardSetupEditor : Editor
             _target = target as CardSetup;
             _targetLastType = _target.cardType;
         }
-
+      
         if (_target.cardType != _targetLastType)
         {
             _targetLastType = _target.cardType;
