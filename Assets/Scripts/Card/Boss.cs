@@ -5,13 +5,17 @@ using UnityEngine;
 [System.Serializable]
 public class Boss : Character
 {
+    public BossLevel[] bossLevels;
+
+
+
     public Boss()
     {
-        this.cardLevels = new BossLevel[12];
+        this.bossLevels = new BossLevel[Balance.CardLevels];
 
-        for (int i = 0; i < this.cardLevels.Length; i++)
+        for (int i = 0; i < this.bossLevels.Length; i++)
         {
-            this.cardLevels[i] = new BossLevel();
+            this.bossLevels[i] = new BossLevel();
         }
     }
 }

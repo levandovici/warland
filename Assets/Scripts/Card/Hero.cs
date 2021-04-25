@@ -5,13 +5,17 @@ using UnityEngine;
 [System.Serializable]
 public class Hero : Character
 {
+    public HeroLevel[] heroLevels;
+
+
+
     public Hero()
     {
-        this.cardLevels = new HeroLevel[12];
+        this.heroLevels = new HeroLevel[Balance.CardLevels];
         
-        for(int i = 0; i < this.cardLevels.Length; i++)
+        for(int i = 0; i < this.heroLevels.Length; i++)
         {
-            this.cardLevels[i] = new HeroLevel();
+            this.heroLevels[i] = new HeroLevel();
         }
     }
 }

@@ -5,13 +5,17 @@ using UnityEngine;
 [System.Serializable]
 public class Spell : Card
 {
+    public SpellLevel[] spellLevels;
+
+
+
     public Spell()
     {
-        this.cardLevels = new SpellLevel[12];
+        this.spellLevels = new SpellLevel[Balance.CardLevels];
 
-        for (int i = 0; i < this.cardLevels.Length; i++)
+        for (int i = 0; i < this.spellLevels.Length; i++)
         {
-            this.cardLevels[i] = new SpellLevel();
+            this.spellLevels[i] = new SpellLevel();
         }
     }
 }

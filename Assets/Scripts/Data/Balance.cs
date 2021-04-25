@@ -2,8 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[System.Serializable]
-public class HeroObject : CharacterObject
+public static class Balance
 {
-
+    public const int CardLevels = 12;
 }
