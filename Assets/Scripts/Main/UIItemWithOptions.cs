@@ -9,20 +9,20 @@ public class UIItemWithOptions : UIItem
     private Button _optionsButton;
 
     [SerializeField]
-    private GameObject _options;
+    private GameObject _optionsPanel;
 
     private bool _optionsOpened = false;
 
 
 
-    private void Awake()
+    public void Awake()
     {
         _optionsButton.onClick.AddListener(() =>
         {
             if (_optionsOpened)
             {
                 _optionsOpened = !_optionsOpened;
-                _options.SetActive(_optionsOpened);
+                _optionsPanel.SetActive(_optionsOpened);
             }
         });
     }

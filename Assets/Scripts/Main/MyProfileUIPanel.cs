@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class MyProfileUIPanel : UIPanel
 {
     [SerializeField]
-    private Button _myProfile;
+    private Button _myProfileButton;
 
     [SerializeField]
     private Text _name;
@@ -18,13 +18,13 @@ public class MyProfileUIPanel : UIPanel
     private Text _towerLevel;
 
     [SerializeField]
-    private Button _clanFlag;
+    private Button _clanFlagButton;
 
     [SerializeField]
     private Text _clanName;
 
     [SerializeField]
-    private Button _openClan;
+    private Button _openClanButton;
 
     [SerializeField]
     private Text _stars;
@@ -35,5 +35,14 @@ public class MyProfileUIPanel : UIPanel
 
 
     [SerializeField]
-    private Button _friends;
+    private Button _friendsButton;
+
+    [SerializeField]
+    private Button _friendsFriendsButton;
+
+    [SerializeField]
+    private Button _friendsInvitationsButton;
+
+    [SerializeField]
+    private Button _friendsSearchButton;
 }
