@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using System;
 
-public class FriendUIItem : UIItemWithOptions
+public class InvitationInFriendsUIItem : UIItemWithOptions
 {
     [SerializeField]
     private Text _position;
@@ -36,10 +36,10 @@ public class FriendUIItem : UIItemWithOptions
     private Text _clanText;
 
     [SerializeField]
-    private Button _inviteInClanButton;
+    private Button _acceptButton;
 
     [SerializeField]
-    private Text _inviteInClanText;
+    private Text _acceptText;
 
     [SerializeField]
     private Button _deleteButton;
@@ -53,7 +53,7 @@ public class FriendUIItem : UIItemWithOptions
 
     public event Action OnClanButtonClicked;
 
-    public event Action OnInviteInClanButtonClicked;
+    public event Action OnAcceptButtonClicked;
 
     public event Action OnDeleteButtonClicked;
 
@@ -67,21 +67,19 @@ public class FriendUIItem : UIItemWithOptions
 
         _clanButton.onClick.AddListener(() => OnClanButtonClicked.Invoke());
 
-        _inviteInClanButton.onClick.AddListener(() => OnInviteInClanButtonClicked.Invoke());
+        _acceptButton.onClick.AddListener(() => OnAcceptButtonClicked.Invoke());
 
         _deleteButton.onClick.AddListener(() => OnDeleteButtonClicked.Invoke());
     }
 
-
-
-    public void SetUp(int position, string name, string clanState, int starsCount, string towerLevel,
-        string profileText, string clanText, string inviteInClanText, string deleteText)
+    public void SetUp(int position, string name, string clanStare, int starsCount, string towerLevel,
+        string profileText, string clanText, string acceptText, string deleteText)
     {
         _position.text = $"{position}";
 
         _name.text = name;
 
-        _clanState.text = clanState;
+        _clanState.text = clanStare;
 
         _starsCount.text = $"{starsCount}";
 
@@ -91,7 +89,7 @@ public class FriendUIItem : UIItemWithOptions
 
         _clanText.text = clanText;
 
-        _inviteInClanText.text = inviteInClanText;
+        _acceptText.text = acceptText;
 
         _deleteText.text = deleteText;
     }

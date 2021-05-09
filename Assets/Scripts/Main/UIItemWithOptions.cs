@@ -19,11 +19,8 @@ public class UIItemWithOptions : UIItem
     {
         _optionsButton.onClick.AddListener(() =>
         {
-            if (_optionsOpened)
-            {
-                _optionsOpened = !_optionsOpened;
-                _optionsPanel.SetActive(_optionsOpened);
-            }
+            _optionsOpened = !_optionsOpened;
+            _optionsPanel.SetActive(_optionsOpened);
         });
     }
 }

@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using System;
 
-public class FriendUIItem : UIItemWithOptions
+public class InvitationInClanUIItem : UIItemWithOptions
 {
     [SerializeField]
     private Text _position;
@@ -13,21 +13,15 @@ public class FriendUIItem : UIItemWithOptions
     private Text _name;
 
     [SerializeField]
-    private Text _clanState;
-
-    [SerializeField]
     private Text _starsCount;
 
     [SerializeField]
-    private Text _towerLevel;
+    private Text _clanLockType;
+
+    [SerializeField]
+    private Text _clanPlayersCount;
 
     ///OPTIONS///
-
-    [SerializeField]
-    private Button _profileButton;
-
-    [SerializeField]
-    private Text _profileText;
 
     [SerializeField]
     private Button _clanButton;
@@ -36,10 +30,10 @@ public class FriendUIItem : UIItemWithOptions
     private Text _clanText;
 
     [SerializeField]
-    private Button _inviteInClanButton;
+    private Button _acceptButton;
 
     [SerializeField]
-    private Text _inviteInClanText;
+    private Text _acceptText;
 
     [SerializeField]
     private Button _deleteButton;
@@ -49,11 +43,9 @@ public class FriendUIItem : UIItemWithOptions
 
 
 
-    public event Action OnProfileButtonClicked;
-
     public event Action OnClanButtonClicked;
 
-    public event Action OnInviteInClanButtonClicked;
+    public event Action OnAcceptButtonClicked;
 
     public event Action OnDeleteButtonClicked;
 
@@ -63,36 +55,37 @@ public class FriendUIItem : UIItemWithOptions
     {
         base.Awake();
 
-        _profileButton.onClick.AddListener(() => OnProfileButtonClicked.Invoke());
-
         _clanButton.onClick.AddListener(() => OnClanButtonClicked.Invoke());
 
-        _inviteInClanButton.onClick.AddListener(() => OnInviteInClanButtonClicked.Invoke());
+        _acceptButton.onClick.AddListener(() => OnAcceptButtonClicked.Invoke());
 
         _deleteButton.onClick.AddListener(() => OnDeleteButtonClicked.Invoke());
     }
 
 
 
-    public void SetUp(int position, string name, string clanState, int starsCount, string towerLevel,
-        string profileText, string clanText, string inviteInClanText, string deleteText)
+    public void SetUp(int position, string name, int starsCount, string clanLockType, int playersCount, int max,
+        string clanText, string acceptText, string deleteText)
     {
         _position.text = $"{position}";
 
         _name.text = name;
 
-        _clanState.text = clanState;
-
         _starsCount.text = $"{starsCount}";
 
-        _towerLevel.text = towerLevel;
+        _clanLockType.text = clanLockType;
 
-        _profileText.text = profileText;
+        SetUpClanPlayersCount(playersCount, max);
 
         _clanText.text = clanText;
 
-        _inviteInClanText.text = inviteInClanText;
+        _acceptText.text = acceptText;
 
         _deleteText.text = deleteText;
+    }
+
+    public void SetUpClanPlayersCount(int playersCount, int max)
+    {
+        _clanPlayersCount.text = $"{playersCount}/{max}";
     }
 }

@@ -34,28 +34,13 @@ public class ResourcesUIPanel : UIPanel
 
     public void SetUp(int diamonds, int gold, int stars, bool isKeyLoading, int keys, int maxKeys, TimeSpan keyLoadingRemainingTime)
     {
-        SetUpDiamonds(diamonds);
+        _diamonds.text = diamonds.ToString("# ### ### ### ### ##0");
 
-        SetUpGold(gold);
+        _gold.text = gold.ToString("# ### ### ### ### ##0");
 
-        SetUpStars(stars);
+        _stars.text = stars.ToString("# ### ### ### ### ##0");
 
         SetUpKeys(isKeyLoading, keys, maxKeys, keyLoadingRemainingTime);
-    }
-
-    public void SetUpDiamonds(int diamonds)
-    {
-        _diamonds.text = diamonds.ToString("# ### ### ### ### ##0");
-    }
-
-    public void SetUpGold(int gold)
-    {
-        _gold.text = gold.ToString("# ### ### ### ### ##0");
-    }
-
-    public void SetUpStars(int stars)
-    {
-        _stars.text = stars.ToString("# ### ### ### ### ##0");
     }
 
     public void SetUpKeys(bool isKeyLoading, int keys, int maxKeys, TimeSpan keyLoadingRemainingTime)

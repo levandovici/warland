@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using System;
 
-public class FriendUIItem : UIItemWithOptions
+public class SearchFriendUIItem : UIItemWithOptions
 {
     [SerializeField]
     private Text _position;
@@ -42,10 +42,10 @@ public class FriendUIItem : UIItemWithOptions
     private Text _inviteInClanText;
 
     [SerializeField]
-    private Button _deleteButton;
+    private Button _inviteInFriendsButton;
 
     [SerializeField]
-    private Text _deleteText;
+    private Text _inviteInFriendsText;
 
 
 
@@ -55,7 +55,7 @@ public class FriendUIItem : UIItemWithOptions
 
     public event Action OnInviteInClanButtonClicked;
 
-    public event Action OnDeleteButtonClicked;
+    public event Action OnInviteInFriendsButtonClicked;
 
 
 
@@ -69,13 +69,13 @@ public class FriendUIItem : UIItemWithOptions
 
         _inviteInClanButton.onClick.AddListener(() => OnInviteInClanButtonClicked.Invoke());
 
-        _deleteButton.onClick.AddListener(() => OnDeleteButtonClicked.Invoke());
+        _inviteInFriendsButton.onClick.AddListener(() => OnInviteInFriendsButtonClicked.Invoke());
     }
 
 
 
-    public void SetUp(int position, string name, string clanState, int starsCount, string towerLevel,
-        string profileText, string clanText, string inviteInClanText, string deleteText)
+    public void SetUp(int position, string name, string clanState, int starsCount, string towerLevel, 
+        string profileText, string clanText, string inviteInClanText, string inviteInFriendsText)
     {
         _position.text = $"{position}";
 
@@ -93,6 +93,6 @@ public class FriendUIItem : UIItemWithOptions
 
         _inviteInClanText.text = inviteInClanText;
 
-        _deleteText.text = deleteText;
+        _inviteInFriendsText.text = inviteInFriendsText;
     }
 }

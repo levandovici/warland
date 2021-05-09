@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using System;
 
-public class FriendUIItem : UIItemWithOptions
+public class MyInvitationInFriendsUIItem : UIItemWithOptions
 {
     [SerializeField]
     private Text _position;
@@ -49,7 +49,7 @@ public class FriendUIItem : UIItemWithOptions
 
 
 
-    public event Action OnProfileButtonClicked;
+    public event Action OnProfileButtonClikced;
 
     public event Action OnClanButtonClicked;
 
@@ -63,7 +63,7 @@ public class FriendUIItem : UIItemWithOptions
     {
         base.Awake();
 
-        _profileButton.onClick.AddListener(() => OnProfileButtonClicked.Invoke());
+        _profileButton.onClick.AddListener(() => OnProfileButtonClikced.Invoke());
 
         _clanButton.onClick.AddListener(() => OnClanButtonClicked.Invoke());
 

@@ -9,6 +9,9 @@ public class MyProfileUIPanel : UIPanel
     private Button _myProfileButton;
 
     [SerializeField]
+    private Text _myProfileText;
+
+    [SerializeField]
     private Text _name;
 
     [SerializeField]
@@ -27,7 +30,13 @@ public class MyProfileUIPanel : UIPanel
     private Button _openClanButton;
 
     [SerializeField]
+    private Text _openText;
+
+    [SerializeField]
     private Text _stars;
+
+    [SerializeField]
+    private Text _achievementsText;
 
     [SerializeField]
     private AchievementUIItem[] _achievements;
@@ -38,11 +47,65 @@ public class MyProfileUIPanel : UIPanel
     private Button _friendsButton;
 
     [SerializeField]
+    private Text _friendsText;
+
+
+    [SerializeField]
     private Button _friendsFriendsButton;
+
+    [SerializeField]
+    private Text _friendsFriendsButtonText;
+
+    [SerializeField]
+    private Text _friendsFriendsText;
+
+    [SerializeField]
+    private FriendUIItem[] _friendsFriends;
+
 
     [SerializeField]
     private Button _friendsInvitationsButton;
 
     [SerializeField]
+    private Text _friendsInvitationsText;
+
+    [SerializeField]
+    private Text _myInvitationsText;
+
+    [SerializeField]
+    private Text _invitationsText;
+
+    [SerializeField]
+    private Text _invitationsInClanText;
+
+    [SerializeField]
+    private MyInvitationInFriendsUIItem[] _myInvitationsInFriends;
+
+    [SerializeField]
+    private InvitationInFriendsUIItem[] _invitationsInFriends;
+
+    [SerializeField]
+    private InvitationInClanUIItem[] _invitationsInClan;
+
+
+    [SerializeField]
     private Button _friendsSearchButton;
+
+    [SerializeField]
+    private Text _friendsSearchButtonText;
+
+    [SerializeField]
+    private Text _friendsSearchText;
+
+    [SerializeField]
+    private InputField _friendsSearchInputField;
+
+    [SerializeField]
+    private Button _searchButton;
+
+    [SerializeField]
+    private Text _searchText;
+
+    [SerializeField]
+    private SearchFriendUIItem[] _searchFriends;
 }
