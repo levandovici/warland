@@ -1,0 +1,20 @@
+card - balance = scriptable object
+
+CardSetup - scriptable object
+CardBalance (12 levels)
+CardInfo (player data)
+Card - Hero, Boss, Spell (game info)
+CardObject - Hero, Boss, Spell (game instance)
+
+
+
+[DEPRECATED]
+!abstract CardSetup
+{
+	Card
+	{
+		CardBalance
+	}
+
+	CardObject
+}
