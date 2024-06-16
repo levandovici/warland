@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TasksUIPanel : MonoBehaviour
+public class TasksUIPanel : UIPanel
 {
     // Start is called before the first frame update
     void Start()

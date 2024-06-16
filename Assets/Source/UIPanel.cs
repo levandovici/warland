@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class UIPanel : MonoBehaviour
 {
-    public void Show()
+    public void Open()
     {
         SetActive(true);
     }
 
-    public void Hide()
+    public void Close()
     {
         SetActive(false);
     }
