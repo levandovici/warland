@@ -18,7 +18,7 @@ public class InitializationManager : MonoBehaviour
         SaveLoadManager.Initialize();
         SaveLoadManager.Load();
 
-        SetUpBackground(SaveLoadManager.Current.map_info.GetLastPassedMapID());
+        SetUpBackground(SaveLoadManager.Current.MapInfo.GetLastPassedMapID());
         _sceneLoader.SetUp(SaveLoadManager.CurrentSessionData.LoadSceneID);
     }
 

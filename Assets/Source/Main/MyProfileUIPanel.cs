@@ -39,6 +39,9 @@ public class MyProfileUIPanel : UIPanel
     private Text _achievementsText;
 
     [SerializeField]
+    private RectTransform _achievementsContent;
+
+    [SerializeField]
     private AchievementUIItem[] _achievements;
 
 
@@ -60,6 +63,9 @@ public class MyProfileUIPanel : UIPanel
     private Text _friendsFriendsText;
 
     [SerializeField]
+    private RectTransform _friendsFriendsContent;
+
+    [SerializeField]
     private FriendUIItem[] _friendsFriends;
 
 
@@ -79,10 +85,19 @@ public class MyProfileUIPanel : UIPanel
     private Text _invitationsInClanText;
 
     [SerializeField]
+    private RectTransform _myInvitationsInFriendsContent;
+
+    [SerializeField]
     private MyInvitationInFriendsUIItem[] _myInvitationsInFriends;
 
     [SerializeField]
+    private RectTransform _invitationsInFriendsContent;
+
+    [SerializeField]
     private InvitationInFriendsUIItem[] _invitationsInFriends;
+
+    [SerializeField]
+    private RectTransform _invitationsInClanContent;
 
     [SerializeField]
     private InvitationInClanUIItem[] _invitationsInClan;
@@ -105,6 +120,9 @@ public class MyProfileUIPanel : UIPanel
 
     [SerializeField]
     private Text _searchText;
+
+    [SerializeField]
+    private RectTransform _searchFriendsContent;
 
     [SerializeField]
     private SearchFriendUIItem[] _searchFriends;

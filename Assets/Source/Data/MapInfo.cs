@@ -3,20 +3,22 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 
+[Serializable]
 public class MapInfo
 {
-    public Map[] maps;
+    [SerializeField]
+    private Map[] _maps;
 
 
 
     public bool IsMapPassed(int id)
     {
-        return maps[id].levels[maps[id].levels.Length - 1].passed;
+        return _maps[id].GetLevel(_maps[id].LevelsCount - 1).IsPassed;
     }
 
     public int GetLastPassedMapID()
     {
-        for(int i = 0; i < maps.Length; i++)
+        for(int i = 0; i < _maps.Length; i++)
         {
             if(!IsMapPassed(i))
             {
@@ -24,18 +26,18 @@ public class MapInfo
             }
         }
 
-        return maps.Length - 1;
+        return _maps.Length - 1;
     }
 
 
 
     public MapInfo()
     {
-        maps = new Map[12];
+        _maps = new Map[12];
 
-        for(int i = 0; i < maps.Length; i++)
+        for(int i = 0; i < _maps.Length; i++)
         {
-            maps[i] = new Map();
+            _maps[i] = new Map();
         }
     }
 }

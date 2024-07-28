@@ -5,17 +5,38 @@ using UnityEngine;
 [System.Serializable]
 public class Map
 {
-    public Level[] levels;
+    [SerializeField]
+    private Level[] _levels;
+
+
+
+    public int LevelsCount
+    {
+        get
+        {
+            return _levels.Length;
+        }
+    }
+
+
+
+    public Level GetLevel(int index)
+    {
+        if (index < 0 || index >= LevelsCount)
+            return null;
+
+        return _levels[index];
+    }
 
 
 
     public Map()
     {
-        levels = new Level[5];
+        _levels = new Level[5];
 
-        for(int i = 0; i < levels.Length; i++)
+        for(int i = 0; i < _levels.Length; i++)
         {
-            levels[i] = new Level();
+            _levels[i] = new Level();
         }
     }
 }

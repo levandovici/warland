@@ -32,7 +32,7 @@ public class ResourcesUIPanel : UIPanel
 
 
 
-    public void SetUp(int diamonds, int gold, int stars, bool isKeyLoading, int keys, int maxKeys, TimeSpan keyLoadingRemainingTime)
+    public void Setup(int diamonds, int gold, int stars, bool isKeyLoading, int keys, int maxKeys, TimeSpan keyLoadingRemainingTime)
     {
         _diamonds.text = diamonds.ToString("# ### ### ### ### ##0");
 
@@ -40,10 +40,10 @@ public class ResourcesUIPanel : UIPanel
 
         _stars.text = stars.ToString("# ### ### ### ### ##0");
 
-        SetUpKeys(isKeyLoading, keys, maxKeys, keyLoadingRemainingTime);
+        SetupKeys(isKeyLoading, keys, maxKeys, keyLoadingRemainingTime);
     }
 
-    public void SetUpKeys(bool isKeyLoading, int keys, int maxKeys, TimeSpan keyLoadingRemainingTime)
+    public void SetupKeys(bool isKeyLoading, int keys, int maxKeys, TimeSpan keyLoadingRemainingTime)
     {
         _keysPanel.SetActive(!isKeyLoading);
         _keysLoadingPanel.SetActive(isKeyLoading);

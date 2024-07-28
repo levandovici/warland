@@ -12,8 +12,21 @@ public class MainSceneManager : MonoBehaviour
 
     private void Awake()
     {
-        
+        Initialise();
     }
+
+
+
+    private void Initialise()
+    {
+        InitialiseUI();
+    }
+
+    private void InitialiseUI()
+    {
+    }
+
+
 
     private void Start()
     {
