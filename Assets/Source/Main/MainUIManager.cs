@@ -49,6 +49,112 @@ public class MainUIManager : MonoBehaviour
 
 
 
+    public ResourcesUIPanel Resources
+    {
+        get
+        {
+            return _resources;
+        }
+    }
+
+    public MyProfileUIPanel MyProfile
+    {
+        get
+        {
+            return _myProfile;
+        }
+    }
+
+    public MapUIPanel Map
+    {
+        get
+        {
+            return _map;
+        }
+    }
+
+    public DeckUIPanel Deck
+    {
+        get
+        {
+            return _deck;
+        }
+    }
+
+    public CardUIPanel Card
+    {
+        get
+        {
+            return _card;
+        }
+    }
+
+    public ClanUIPanel Clan
+    {
+        get
+        {
+            return _clan;
+        }
+    }
+
+    public ShopUIPanel Shop
+    {
+        get
+        {
+            return _shop;
+        }
+    }
+
+    public MainSettingsUIPanel Settings
+    {
+        get
+        {
+            return _settings;
+        }
+    }
+
+    public TasksUIPanel Tasks
+    {
+        get
+        {
+            return _tasks;
+        }
+    }
+
+    public LeaderboardsUIPanel Leaderboards
+    {
+        get
+        {
+            return _leaderboards;
+        }
+    }
+
+    public PlayUIPanel Play
+    {
+        get
+        {
+            return _play;
+        }
+    }
+
+    public ClanProfileUIPanel ClanProfile
+    {
+        get
+        {
+            return _clanProfile;
+        }
+    }
+
+    public PlayerProfileUIPanel PlayerProfile
+    {
+        get
+        {
+            return _playerProfile;
+        }
+    }
+
+
+
     public EPanel Current
     {
         get

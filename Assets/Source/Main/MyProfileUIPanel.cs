@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,11 +6,29 @@ using UnityEngine.UI;
 
 public class MyProfileUIPanel : UIPanel
 {
+    #region Fields 
+
+    #region Main Buttons
+
+    [Header("Main Buttons")]
+
     [SerializeField]
     private Button _myProfileButton;
 
     [SerializeField]
     private Text _myProfileText;
+
+    [SerializeField]
+    private Button _friendsButton;
+
+    [SerializeField]
+    private Text _friendsText;
+
+    #endregion
+
+    #region My Profile
+
+    [Header("My Profile")]
 
     [SerializeField]
     private Text _name;
@@ -44,20 +63,35 @@ public class MyProfileUIPanel : UIPanel
     [SerializeField]
     private AchievementUIItem[] _achievements;
 
+    #endregion
 
+    #region Friends Buttons
 
-    [SerializeField]
-    private Button _friendsButton;
-
-    [SerializeField]
-    private Text _friendsText;
-
+    [Header("Friends Buttons")]
 
     [SerializeField]
     private Button _friendsFriendsButton;
 
     [SerializeField]
     private Text _friendsFriendsButtonText;
+
+    [SerializeField]
+    private Button _friendsInvitationsButton;
+
+    [SerializeField]
+    private Text _friendsInvitationsText;
+
+    [SerializeField]
+    private Button _friendsSearchButton;
+
+    [SerializeField]
+    private Text _friendsSearchButtonText;
+
+    #endregion
+
+    #region Friends List
+
+    [Header("Friends List")]
 
     [SerializeField]
     private Text _friendsFriendsText;
@@ -68,12 +102,11 @@ public class MyProfileUIPanel : UIPanel
     [SerializeField]
     private FriendUIItem[] _friendsFriends;
 
+    #endregion
 
-    [SerializeField]
-    private Button _friendsInvitationsButton;
+    #region Invitations List
 
-    [SerializeField]
-    private Text _friendsInvitationsText;
+    [Header("Invitations List")]
 
     [SerializeField]
     private Text _myInvitationsText;
@@ -102,12 +135,11 @@ public class MyProfileUIPanel : UIPanel
     [SerializeField]
     private InvitationInClanUIItem[] _invitationsInClan;
 
+    #endregion
 
-    [SerializeField]
-    private Button _friendsSearchButton;
+    #region Search List
 
-    [SerializeField]
-    private Text _friendsSearchButtonText;
+    [Header("Search List")]
 
     [SerializeField]
     private Text _friendsSearchText;
@@ -126,4 +158,41 @@ public class MyProfileUIPanel : UIPanel
 
     [SerializeField]
     private SearchFriendUIItem[] _searchFriends;
+
+    #endregion
+
+    #endregion
+
+
+
+    #region Events
+
+    public event Action OnMyProfileClicked;
+
+    public event Action OnFriendsClicked;
+
+
+    public event Action OnClanFlagClicked;
+
+    public event Action OnOpenClanClicked;
+
+
+    public event Action OnFriendsListClicked;
+
+    public event Action OnInvitationsListClicked;
+
+    public event Action OnSearchListClicked;
+
+
+    public event Action OnSearchClicked;
+
+    #endregion
+
+
+
+    #region Properties
+
+
+
+    #endregion
 }
