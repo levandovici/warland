@@ -195,4 +195,30 @@ public class MyProfileUIPanel : UIPanel
 
 
     #endregion
+
+
+
+    private void Awake()
+    {
+        
+    }
+
+
+
+    public override void Open()
+    {
+        base.Open();
+    }
+
+
+
+    public void OpenProfile()
+    {
+
+    }
+
+    public void OpenFriends()
+    {
+
+    }
 }

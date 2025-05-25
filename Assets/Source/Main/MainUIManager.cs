@@ -219,6 +219,9 @@ public class MainUIManager : MonoBehaviour
         _tasksButton.onClick.AddListener(OpenTasks);
 
         _playButton.onClick.AddListener(OpenPlay);
+
+
+        Play.OnCloseClicked += OpenMap;
     }
 
 

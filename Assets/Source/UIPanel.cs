@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class UIPanel : MonoBehaviour
 {
-    public void Open()
+    public virtual void Open()
     {
         SetActive(true);
     }
