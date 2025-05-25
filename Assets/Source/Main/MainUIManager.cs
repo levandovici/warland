@@ -2,9 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SocialPlatforms.Impl;
+using UnityEngine.UI;
 
 public class MainUIManager : MonoBehaviour
 {
+    [Header("UI Panels")]
+
     [SerializeField]
     private ResourcesUIPanel _resources;
 
@@ -43,6 +46,33 @@ public class MainUIManager : MonoBehaviour
 
     [SerializeField]
     private PlayerProfileUIPanel _playerProfile;
+
+
+    [Header("Buttons")]
+
+    [SerializeField]
+    private Button _profileButton;
+
+    [SerializeField]
+    private Button _settingsButton;
+
+    [SerializeField]
+    private Button _mapButton;
+
+    [SerializeField]
+    private Button _deckButton;
+
+    [SerializeField]
+    private Button _shopButton;
+
+    [SerializeField]
+    private Button _tasksButton;
+
+    [SerializeField]
+    private Button _playButton;
+
+
+    [Header("Other")]
 
     [SerializeField]
     private EPanel _current = EPanel.None;
@@ -172,11 +202,105 @@ public class MainUIManager : MonoBehaviour
 
 
 
+    private void Awake()
+    {
+        Setup();
+
+        _profileButton.onClick.AddListener(OpenProfile);
+
+        _settingsButton.onClick.AddListener(OpenSettings);
+
+        _mapButton.onClick.AddListener(OpenMap);
+
+        _deckButton.onClick.AddListener(OpenDeck);
+
+        _shopButton.onClick.AddListener(OpenShop);
+
+        _tasksButton.onClick.AddListener(OpenTasks);
+
+        _playButton.onClick.AddListener(OpenPlay);
+    }
+
+
+
+    private void Setup()
+    {
+        Open(EPanel.Map);
+
+        Close(EPanel.MyProfile);
+
+        Close(EPanel.Deck);
+
+        Close(EPanel.Card);
+
+        Close(EPanel.Clan);
+
+        Close(EPanel.Shop);
+
+        Close(EPanel.Settings);
+
+        Close(EPanel.Tasks);
+
+        Close(EPanel.Leaderboard);
+
+        Close(EPanel.Play);
+
+        Close(EPanel.ClanProfile);
+
+        Close(EPanel.PlayerProfile);
+
+        _current = EPanel.Map;
+    }
+
+
+
+    private void OpenProfile()
+    {
+        Change(EPanel.MyProfile, Current);
+    }
+
+    private void OpenSettings()
+    {
+        Change(EPanel.Settings, Current);
+    }
+
+    private void OpenMap()
+    {
+        Change(EPanel.Map, Current);
+    }
+
+    private void OpenDeck()
+    {
+        Change(EPanel.Deck, Current);
+    }
+
+    private void OpenShop()
+    {
+        Change(EPanel.Shop, Current);
+    }
+
+    private void OpenTasks()
+    {
+        Change(EPanel.Tasks, Current);
+    }
+
+    private void OpenPlay()
+    {
+        Change(EPanel.Play, Current);
+    }
+
+
+
     private void Change(EPanel open, EPanel close)
     {
-        Open(open);
+        if (open == close && _current == open)
+            return;
 
         Close(close);
+
+        Open(open);
+
+        _current = open;
     }
 
     private void Open(EPanel panel)
